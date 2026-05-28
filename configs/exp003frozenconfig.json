@@ -1,0 +1,28 @@
+{
+  "experimentid": "EXP-003",
+  "title": "Adaptive Signal Fusion and RLTA Benchmarking",
+  "preregistrationdate": "2026-05-28",
+  "teamid": "AIVVC-2026-D3BGR",
+  "pipelineversion": "v1.0.0",
+  "alertthreshold": 0.65,
+  "randomseed": 42,
+  "fusionweights": {
+    "riskprobability": 0.70,
+    "anomalyscore": 0.15,
+    "sentimentnegativity": 0.15
+  },
+  "events": [
+    {
+      "name": "McDonald's E. coli",
+      "pathogen": "E. coli O157:H7",
+      "recalldate": "2024-10-22",
+      "successcriterion": ">=14 day lead time"
+    },
+    {
+      "name": "Cucumber Salmonella",
+      "pathogen": "Salmonella Typhimurium",
+      "recalldate": "2024-11-27",
+      "successcriterion": ">=14 day lead time"
+    }
+  ]
+}
