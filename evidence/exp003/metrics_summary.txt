@@ -1,0 +1,11 @@
+EXP-003 Benchmark Metrics
+
+F1 Score: 0.933
+AUPRC: 1.000
+Brier Score: 0.067
+
+Pipeline Version:
+v1.0-exp003-benchmark
+
+Experiment:
+Multi-Outbreak Generalization Benchmark using public weak-signal fusion.
