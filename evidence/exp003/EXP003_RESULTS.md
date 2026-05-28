@@ -48,3 +48,15 @@ Artifacts stored under:
 
 ```text
 evidence/exp003/
+
+---
+
+# Benchmark Results
+
+| Metric | Result |
+|---|---|
+| F1 Score | 0.933 |
+| AUPRC | 1.000 |
+| Brier Score | 0.067 |
+
+Prototype benchmark testing demonstrated strong separability between outbreak escalation periods and baseline periods using public weak-signal fusion.
