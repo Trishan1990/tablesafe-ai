@@ -1,0 +1,105 @@
+{
+  "experiment_id": "EXP-006-LIVE",
+  "experiment_name": "Prospective Validation - Moringa Salmonella Outbreak",
+
+  "pre_registration_date": "2026-05-29",
+  "logged_by": "Trishan Kundu (TableSafe AI)",
+  "pipeline_version": "v1.0.0",
+
+  "test_type": "PROSPECTIVE_VALIDATION",
+
+  "event": {
+    "name": "Moringa Leaf Powder Salmonella Outbreak",
+    "product": "Live it Up Super Greens; Why Not Natural Moringa Capsules",
+    "pathogen": "Salmonella Typhimurium + Salmonella Newport",
+    "product_category": "Dietary Supplement",
+    "company": "Superfoods Inc. dba Live it Up; Why Not Natural",
+
+    "recall_date": "2026-01-15",
+    "investigation_reopened": "2026-05-27",
+
+    "total_cases": 119,
+    "hospitalizations": 32,
+    "deaths": 0,
+    "states_affected": 36,
+
+    "illness_onset_range": "2025-08-22 to 2026-04-26"
+  },
+
+  "observation_window": {
+    "start_date": "2025-08-01",
+    "end_date": "2026-02-28"
+  },
+
+  "baseline_window": {
+    "start_date": "2025-05-01",
+    "end_date": "2025-07-31"
+  },
+
+  "data_sources": [
+    "Google Trends",
+    "Reddit",
+    "FDA",
+    "CDC"
+  ],
+
+  "google_trends_keywords": [
+    "moringa side effects",
+    "moringa food poisoning",
+    "super greens supplement sick",
+    "salmonella supplement",
+    "moringa salmonella"
+  ],
+
+  "reddit_keywords": [
+    "moringa sick",
+    "super greens food poisoning",
+    "moringa diarrhea",
+    "supplement salmonella",
+    "live it up super greens"
+  ],
+
+  "model_config": {
+    "isolation_forest": {
+      "n_estimators": 200,
+      "contamination": 0.25,
+      "random_state": 42
+    },
+
+    "gradient_boosting": {
+      "n_estimators": 200,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "cross_validation_folds": 5,
+      "stratified": true
+    },
+
+    "composite_score_weights": {
+      "risk_probability": 0.70,
+      "anomaly_score": 0.15,
+      "sentiment_negativity": 0.15
+    },
+
+    "alert_threshold": 0.65,
+
+    "convergence_rule": "Two or more independent signal streams exceed 2-sigma simultaneously"
+  },
+
+  "success_criteria": {
+    "minimum_lead_time_days": 14,
+    "minimum_elevated_channels": 2,
+    "minimum_cv_f1": 0.75,
+    "data_constraint": "Public signals only",
+    "alert_before_recall": true
+  },
+
+  "planned_outputs": [
+    "Risk Timeline",
+    "Composite Risk Score",
+    "Signal Convergence Analysis",
+    "Evidence Brief Generator",
+    "Interactive Dashboard"
+  ],
+
+  "status": "FROZEN_BEFORE_ANALYSIS"
+}
