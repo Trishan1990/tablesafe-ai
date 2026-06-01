@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-006-LIVE",
+  "event": "Moringa Leaf Powder Salmonella (Live it Up Super Greens)",
+  "recall_date": "2026-01-14",
+  "alert_date": "2025-12-15",
+  "days_early": 30,
+  "result": "PASS",
+  "composite_risk_at_alert": 0.7909,
+  "peak_composite_risk": 0.9415,
+  "f1_score": 1.0,
+  "precision": 1.0,
+  "recall_metric": 1.0,
+  "cv_f1_5fold": 1.0,
+  "pipeline_version": "v1.0.0",
+  "model_config": {
+    "n_estimators": 200,
+    "contamination": 0.25,
+    "random_state": 42,
+    "alert_threshold": 0.65
+  }
+}
