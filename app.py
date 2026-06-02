@@ -14,6 +14,31 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
+/* Hide Streamlit top white header */
+header[data-testid="stHeader"] {
+    background: transparent;
+    height: 0px;
+}
+
+/* Hide Streamlit toolbar */
+[data-testid="stToolbar"] {
+    display: none;
+}
+
+/* Hide Streamlit main menu */
+#MainMenu {
+    visibility: hidden;
+}
+
+/* Hide Streamlit footer */
+footer {
+    visibility: hidden;
+}
+
+/* Remove top white spacing */
+.block-container {
+    padding-top: 0rem !important;
+}
 .stApp {
     background: radial-gradient(circle at top left, #102a3f 0%, #07111f 45%, #020617 100%);
     color: #e5eefc;
