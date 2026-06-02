@@ -293,58 +293,58 @@ if page == "🏠 Executive Summary":
         """, unsafe_allow_html=True)
 # NEW BLOCK STARTS HERE
 
-st.write("")
-
-b1, b2, b3, b4 = st.columns(4)
-
-with b1:
-    st.markdown("""
-    <div class="card">
-        <div class="metric-title">Signals Analyzed</div>
-        <div class="metric-value">5</div>
-        <div class="metric-caption">public sources</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with b2:
-    st.markdown("""
-    <div class="card">
-        <div class="metric-title">Product Type</div>
-        <div class="metric-value">Supplement</div>
-        <div class="metric-caption">Moringa Powder</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with b3:
-    st.markdown("""
-    <div class="card">
-        <div class="metric-title">Decision Confidence</div>
-        <div class="metric-value">94.2%</div>
-        <div class="metric-caption">AI explainability score</div>
-    </div>
-    """, unsafe_allow_html=True)
-with b4:
-    st.markdown("""
-    <div class="card">
-        <div class="metric-title">Potential Exposure</div>
-        <div class="metric-value">$2.3M</div>
-        <div class="metric-caption">estimated impact</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-# NEW BLOCK ENDS HERE    
-
-    st.markdown('<div class="section-title">Executive Decision Recommendation</div>', unsafe_allow_html=True)
-
-    st.markdown(f"""
-    <div class="card">
-        <h2 style="color:#2dd4bf;">ESCALATE INVESTIGATION</h2>
-        <p><b>Reason:</b> Composite risk exceeded the 65% alert threshold.</p>
-        <p><b>Early Warning:</b> TableSafe AI generated the alert <b>{days_early} days</b> before official recall.</p>
-        <p><b>Action:</b> Initiate supplier review, product testing, retailer notification, and regulatory monitoring.</p>
-        <p><b>Decision Confidence:</b> {peak_risk:.1%}</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.write("")
+    
+    b1, b2, b3, b4 = st.columns(4)
+    
+    with b1:
+        st.markdown("""
+        <div class="card">
+            <div class="metric-title">Signals Analyzed</div>
+            <div class="metric-value">5</div>
+            <div class="metric-caption">public sources</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with b2:
+        st.markdown("""
+        <div class="card">
+            <div class="metric-title">Product Type</div>
+            <div class="metric-value">Supplement</div>
+            <div class="metric-caption">Moringa Powder</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with b3:
+        st.markdown("""
+        <div class="card">
+            <div class="metric-title">Decision Confidence</div>
+            <div class="metric-value">94.2%</div>
+            <div class="metric-caption">AI explainability score</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with b4:
+        st.markdown("""
+        <div class="card">
+            <div class="metric-title">Potential Exposure</div>
+            <div class="metric-value">$2.3M</div>
+            <div class="metric-caption">estimated impact</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # NEW BLOCK ENDS HERE    
+    
+        st.markdown('<div class="section-title">Executive Decision Recommendation</div>', unsafe_allow_html=True)
+    
+        st.markdown(f"""
+        <div class="card">
+            <h2 style="color:#2dd4bf;">ESCALATE INVESTIGATION</h2>
+            <p><b>Reason:</b> Composite risk exceeded the 65% alert threshold.</p>
+            <p><b>Early Warning:</b> TableSafe AI generated the alert <b>{days_early} days</b> before official recall.</p>
+            <p><b>Action:</b> Initiate supplier review, product testing, retailer notification, and regulatory monitoring.</p>
+            <p><b>Decision Confidence:</b> {peak_risk:.1%}</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 # -----------------------------
 # Risk Timeline
