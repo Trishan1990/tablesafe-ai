@@ -292,7 +292,7 @@ elif page == "📈 Risk Timeline":
 
     st.info(
         f"TableSafe AI crossed the alert threshold on {alert_date}, achieving {days_early} days of lead time before the official recall on {recall_date}."
-
+    )
 # -----------------------------
 # Explainability Engine
 # -----------------------------
