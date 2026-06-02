@@ -247,6 +247,24 @@ with right:
 st.write("")
 
 # -----------------------------
+
+# -----------------------------
+# Executive Decision Box
+# -----------------------------
+st.markdown('<div class="section-title">Executive Decision Recommendation</div>', unsafe_allow_html=True)
+
+st.markdown(f"""
+<div class="card">
+    <h3 style="color:#2dd4bf;">ESCALATE INVESTIGATION</h3>
+    <p><b>Reason:</b> Composite risk exceeded the 65% alert threshold.</p>
+    <p><b>Early Warning:</b> TableSafe AI generated the alert <b>{days_early} days</b> before the official recall.</p>
+    <p><b>Action:</b> Initiate supplier review, product testing, retailer notification, and regulatory monitoring.</p>
+    <p><b>Decision Confidence:</b> {peak_risk:.1%}</p>
+</div>
+""", unsafe_allow_html=True)
+
+st.write("")
+
 # Signal Intelligence Layer
 # -----------------------------
 st.markdown('<div class="section-title">Signal Fusion Intelligence Layer</div>', unsafe_allow_html=True)
