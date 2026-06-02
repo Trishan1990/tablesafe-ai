@@ -238,7 +238,21 @@ if page == "🏠 Executive Summary":
         height=320
     )
 
-    st.plotly_chart(gauge, use_container_width=True)    
+g1, g2 = st.columns([1, 2])
+
+with g1:
+    st.plotly_chart(gauge, use_container_width=True)
+
+with g2:
+    st.markdown("""
+    <div class="card">
+        <h2 style="color:#2dd4bf;">Executive Summary</h2>
+        <p><b>Risk Level:</b> High</p>
+        <p><b>Lead Time:</b> 30 days before recall</p>
+        <p><b>Alert Status:</b> Escalated</p>
+        <p><b>Recommendation:</b> Immediate investigation</p>
+    </div>
+    """, unsafe_allow_html=True) 
 
     c1, c2, c3, c4 = st.columns(4)
 
