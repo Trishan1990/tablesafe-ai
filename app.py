@@ -117,8 +117,8 @@ html, body, [class*="css"] {
 # -----------------------------
 # Load Data
 # -----------------------------
-results_path = Path("data/exp006_results.json")
-scores_path = Path("data/exp006_weekly_scores.csv")
+results_path = Path("data/exp006/exp006_results.json")
+scores_path = Path("data/exp006/exp006_weekly_scores.csv")
 
 if not results_path.exists() or not scores_path.exists():
     st.error("Missing exp006_results.json or exp006_weekly_scores.csv. Run the pipeline first.")
