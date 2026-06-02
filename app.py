@@ -215,6 +215,30 @@ if page == "🏠 Executive Summary":
     """, unsafe_allow_html=True)
 
     st.write("")
+    gauge = go.Figure(go.Indicator(
+        mode="gauge+number",
+        value=alert_risk * 100,
+        title={"text": "Current Alert Risk"},
+        number={"suffix": "%"},
+        gauge={
+            "axis": {"range": [0, 100]},
+            "bar": {"color": "#2dd4bf"},
+            "steps": [
+                {"range": [0, 40], "color": "#0f172a"},
+                {"range": [40, 65], "color": "#334155"},
+                {"range": [65, 85], "color": "#7f1d1d"},
+                {"range": [85, 100], "color": "#991b1b"},
+            ],
+        }
+    ))
+
+    gauge.update_layout(
+        paper_bgcolor="#07111f",
+        font={"color": "white"},
+        height=320
+    )
+
+    st.plotly_chart(gauge, use_container_width=True)    
 
     c1, c2, c3, c4 = st.columns(4)
 
