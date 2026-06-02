@@ -298,7 +298,7 @@ st.info(
 # Explainability Engine
 # -----------------------------
 elif page == "🔍 Explainability Engine":
-    st.markdown('<div class="section-title">Alert Explainability Engine</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Alert Explainability Engine</div>', unsafe_allow_html=True)
 
     c1, c2 = st.columns([1.2, 1])
 
