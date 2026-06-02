@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 from pathlib import Path
+import plotly.express as px
 
 st.set_page_config(
     page_title="TableSafe AI | EXP-006",
@@ -276,7 +277,18 @@ elif page == "📈 Risk Timeline":
     chart_df = chart_df.rename(columns={week_col: "Week", risk_col: "Composite Risk"})
     chart_df = chart_df.set_index("Week")
 
-    st.line_chart(chart_df, height=450)
+    fig = px.line(
+    chart_df,
+    height=450
+)
+
+fig.update_layout(
+    paper_bgcolor="#07111f",
+    plot_bgcolor="#07111f",
+    font_color="white"
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
     st.info(
         f"TableSafe AI crossed the alert threshold on {alert_date}, achieving {days_early} days of lead time before the official recall on {recall_date}."
