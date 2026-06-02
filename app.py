@@ -3,6 +3,7 @@ import pandas as pd
 import json
 from pathlib import Path
 import plotly.express as px
+import plotly.graph_objects as go
 
 st.set_page_config(
     page_title="TableSafe AI | EXP-006",
